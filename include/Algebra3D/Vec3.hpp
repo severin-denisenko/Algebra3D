@@ -26,16 +26,13 @@ namespace algebra {
         Vec3& operator*=(ValueType other);
         Vec3& operator/=(ValueType other);
 
-        ValueType& operator[](std::size_t index);
+        ValueType& operator()(std::size_t index);
+        const ValueType& operator()(std::size_t index) const;
 
         ValueType i;
         ValueType j;
         ValueType k;
     };
-
-    inline Vec3::ValueType& Vec3::operator[](std::size_t index) {
-        return *(reinterpret_cast<Vec3::ValueType*>(this) + index);
-    }
 
     inline std::ostream& operator<<(std::ostream& out, const Vec3& v) {
         return out << v.i << ' ' << v.j << ' ' << v.k;

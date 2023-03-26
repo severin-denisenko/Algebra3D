@@ -59,4 +59,11 @@ namespace algebra {
         return *this;
     }
 
+    Vec3::ValueType& Vec3::operator()(std::size_t index) {
+        return *(reinterpret_cast<Vec3::ValueType*>(this) + index);
+    }
+
+    const Vec3::ValueType& Vec3::operator()(std::size_t index) const {
+        return *(reinterpret_cast<const Vec3::ValueType*>(this) + index);
+    }
 } // algebra
