@@ -17,8 +17,8 @@ namespace algebra {
         Vec3();
         Vec3(ValueType i, ValueType j, ValueType k);
 
-        Vec3 unit();
-        ValueType norm();
+        Vec3 unit() const;
+        ValueType norm() const;
 
         Vec3 operator-() const;
         Vec3& operator-=(const Vec3& other);

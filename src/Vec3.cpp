@@ -14,12 +14,12 @@ namespace algebra {
 
     }
 
-    Vec3 Vec3::unit() {
+    Vec3 Vec3::unit() const {
         ValueType n = norm();
         return {i / n, j / n, k / n};
     }
 
-    Vec3::ValueType Vec3::norm() {
+    Vec3::ValueType Vec3::norm() const {
         return std::sqrt(i * i + j * j + k * k);
     }
 
