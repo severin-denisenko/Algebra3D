@@ -42,6 +42,10 @@ namespace algebra {
         return {a.i + b.i, a.j + b.j, a.k + b.k};
     }
 
+    inline Vec3 operator-(const Vec3& a, const Vec3& b) {
+        return {a.i - b.i, a.j - b.j, a.k - b.k};
+    }
+
     inline Vec3 operator*(const Vec3& a, const Vec3& b) {
         return {a.i * b.i, a.j * b.j, a.k * b.k};
     }
